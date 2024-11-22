@@ -17,7 +17,7 @@ interface ProductItemProps {
 
 const ProductItem = ({ product }: ProductItemProps) => {
   return (
-    <div className="w-36 min-w-36">
+    <div className="w-36 min-w-36 space-y-2">
       {/* IMAGE: */}
       <div className="relative h-36 w-full">
         <Image
@@ -27,9 +27,10 @@ const ProductItem = ({ product }: ProductItemProps) => {
           className="rounded-lg object-cover"
         />
 
+        {/* DISCOUNT BADGE: */}
         {
           product.discountPercentage > 0 && (
-            <div className="absolute top-2 left-2 bg-primary px-1.5 py-0.5 rounded-full text-white flex items-center">
+            <div className="absolute top-2 left-2 bg-primary px-2 py-0.5 rounded-full text-white flex items-center">
               <ArrowDownIcon size={12} />
               <span className="text-xs font-semibold">{product.discountPercentage}%</span>
             </div>
