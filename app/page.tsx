@@ -1,6 +1,8 @@
+import Header from "./_components/header";
+
 const Home = () => {
   return (
-    <div></div>
+    <Header />
   );
 };
 
