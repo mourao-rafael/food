@@ -8,7 +8,7 @@ const CategoryList = async () => {
   const categories = await db.category.findMany({});
 
   return (
-    <div className="flex overflow-x-scroll gap-3 py-3 px-3 min-w-full">
+    <div className="flex overflow-x-scroll [&::-webkit-scrollbar]:hidden gap-3 py-3 px-5 min-w-full">
       {categories.map(category => <CategoryItem key={category.id} category={category} />)}
     </div>
   )
