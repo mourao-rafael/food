@@ -48,7 +48,7 @@ const ProductPage = async ({ params }: ProductPageProps) => {
       <ProductImage product={product} />
 
       {/* TITLE AND PRICE: */}
-      <div className="p-5">
+      <div className="p-5 relative mt-[-1.5rem] z-50 rounded-t-3xl bg-white">
         {/* RESTAURANT: */}
         <RestaurantInfo product={product} />
 
@@ -68,7 +68,7 @@ const ProductPage = async ({ params }: ProductPageProps) => {
       </div>
 
       {/* OTHER PRODUCTS: */}
-      <div className="space-y-2">
+      <div className="pb-3 space-y-2">
         <ListTitle title="Outros produtos" />
         <ProductsList products={otherProducts} />
       </div>
