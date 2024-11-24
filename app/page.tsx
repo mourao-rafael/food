@@ -2,11 +2,10 @@ import CategoryList from "./_components/category-list";
 import Header from "./_components/header";
 import Search from "./_components/search";
 import ProductsList from "./_components/products-list";
-import { Button } from "./_components/ui/button";
-import { ChevronRight } from "lucide-react";
 import { db } from "./_lib/prisma";
 import PromoBanner from "./_components/promo-banner";
 import RestaurantList from "./_components/restaurant-list";
+import ListTitle from "./_components/list-title";
 
 const Home = async () => {
   const products = await db.product.findMany({
@@ -46,13 +45,7 @@ const Home = async () => {
       />
 
       <div className="py-3 space-y-2">
-        <div className="px-5 flex items-center justify-between">
-          <h2 className="font-semibold">Pedidos Recomendados</h2>
-          <Button variant="ghost" className="text-primary p-0 hover:bg-transparent h-fit">
-            Ver todos
-            <ChevronRight />
-          </Button>
-        </div>
+        <ListTitle title="Pedidos Recomendados" url="/pedidos-recomendados" />
         <ProductsList products={products} />
       </div>
 
@@ -62,13 +55,7 @@ const Home = async () => {
       />
 
       <div className="py-3 space-y-2">
-        <div className="px-5 flex items-center justify-between">
-          <h2 className="font-semibold">Restaurantes Recomendados</h2>
-          <Button variant="ghost" className="text-primary p-0 hover:bg-transparent h-fit">
-            Ver todos
-            <ChevronRight />
-          </Button>
-        </div>
+        <ListTitle title="Restaurantes Recomendados" url="/restaurantes-recomendados" />
         <RestaurantList />
       </div>
     </>
