@@ -1,12 +1,12 @@
 import { db } from "@/app/_lib/prisma";
 import { notFound } from "next/navigation";
-import ProductImage from "../_components/product-image";
 import RestaurantInfo from "../_components/restaurant-info";
 import ProductPriceQuantity from "../_components/product-price-quantity";
-import DeliveryCard from "../_components/delivery-card";
+import DeliveryCard from "../../_components/delivery-card";
 import ProductsList from "@/app/_components/products-list";
 import ListTitle from "@/app/_components/list-title";
 import { Button } from "@/app/_components/ui/button";
+import DetailsPageImage from "@/app/_components/details-page-image";
 
 interface ProductPageProps {
   params: {
@@ -46,7 +46,7 @@ const ProductPage = async ({ params }: ProductPageProps) => {
   return (
     <>
       {/* IMAGE: */}
-      <ProductImage product={product} />
+      <DetailsPageImage src={product.imageUrl} alt={product.name} />
 
       {/* TITLE AND PRICE: */}
       <div className="p-5 relative mt-[-1.5rem] z-50 rounded-t-3xl bg-white">
