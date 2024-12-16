@@ -55,7 +55,7 @@ const Home = async () => {
       />
 
       <div className="py-3 space-y-2">
-        <ListTitle title="Restaurantes Recomendados" url="/restaurantes-recomendados" />
+        <ListTitle title="Restaurantes Recomendados" url="/restaurants/recommended" />
         <RestaurantList />
       </div>
     </>
