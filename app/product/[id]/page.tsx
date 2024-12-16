@@ -6,6 +6,7 @@ import ProductPriceQuantity from "../_components/product-price-quantity";
 import DeliveryCard from "../_components/delivery-card";
 import ProductsList from "@/app/_components/products-list";
 import ListTitle from "@/app/_components/list-title";
+import { Button } from "@/app/_components/ui/button";
 
 interface ProductPageProps {
   params: {
@@ -71,6 +72,10 @@ const ProductPage = async ({ params }: ProductPageProps) => {
       <div className="pb-3 space-y-2">
         <ListTitle title="Outros produtos" />
         <ProductsList products={otherProducts} />
+      </div>
+
+      <div className="px-5 pb-5">
+        <Button className="w-full mt-6 font-semibold">Adicionar à sacola</Button>
       </div>
     </>
   )

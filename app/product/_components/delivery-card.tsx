@@ -22,7 +22,7 @@ const DeliveryCard = ({ restaurant, className }: DeliveryCardProps) => {
 
       <div className="flex flex-col items-center">
         <div className="flex items-center gap-1 text-muted-foreground">
-          <span className="">Entrega</span>
+          <span className="">Tempo</span>
           <TimerIcon />
         </div>
         <b>{restaurant.deliveryTimeMinutes} min</b>
