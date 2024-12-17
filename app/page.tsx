@@ -45,7 +45,7 @@ const Home = async () => {
       />
 
       <div className="py-3 space-y-2">
-        <ListTitle title="Pedidos Recomendados" url="/pedidos-recomendados" />
+        <ListTitle title="Pedidos Recomendados" url="/product/recommended" />
         <ProductsList products={products} />
       </div>
 

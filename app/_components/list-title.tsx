@@ -16,12 +16,12 @@ const ListTitle = ({ title, url }: ListTitleProps) => {
 
       {
         url && (
-          <Link href={url}>
-            <Button variant="ghost" className="text-primary p-0 hover:bg-transparent h-fit">
+          <Button asChild variant="ghost" className="text-primary p-0 hover:bg-transparent h-fit">
+            <Link href={url}>
               Ver todos
               <ChevronRight />
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         )
       }
     </div>
