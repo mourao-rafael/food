@@ -6,7 +6,7 @@ const RecommendedRestaurantsPage = async () => {
   const restaurants = await db.restaurant.findMany({});
 
   return (
-    <RestaurantsListingPage restaurants={restaurants} />
+    <RestaurantsListingPage restaurants={restaurants} pageTitle="Restaurantes Recomendados" />
   )
 };
 

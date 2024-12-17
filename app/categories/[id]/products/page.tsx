@@ -30,7 +30,7 @@ const CategoryProductsPage = async ({ params: { id } }: CategoryProductsPageProp
   }
 
   return (
-    <ProductsListingPage products={products} />
+    <ProductsListingPage products={products} pageTitle={category.name} />
   );
 };
 

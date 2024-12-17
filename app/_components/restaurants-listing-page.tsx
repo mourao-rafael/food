@@ -4,13 +4,14 @@ import RestaurantItem from "./restaurant-item";
 
 interface RestaurantsListingPageProps {
   restaurants: Restaurant[];
+  pageTitle: string;
 }
 
-const RestaurantsListingPage = ({ restaurants }: RestaurantsListingPageProps) => {
+const RestaurantsListingPage = ({ restaurants, pageTitle }: RestaurantsListingPageProps) => {
   return (
     <div>
       <Header />
-      <h2 className="text-lg font-semibold px-5 py-6">Restaurantes Recomendados</h2>
+      <h2 className="text-lg font-semibold px-5 py-6">{pageTitle}</h2>
       <div className="flex flex-col space-y-4 px-5 gap-6">
         {
           restaurants.map(restaurant => (

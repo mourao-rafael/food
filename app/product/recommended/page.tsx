@@ -22,7 +22,7 @@ const RecommendedProductsPage = async () => {
   });
 
   return (
-    <ProductsListingPage products={products} />
+    <ProductsListingPage products={products} pageTitle="Produtos Recomendados" />
   );
 };
 

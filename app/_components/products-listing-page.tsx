@@ -11,14 +11,15 @@ interface ProductsListingPageProps {
         },
       },
     },
-  }>[];
+  }>[],
+  pageTitle: string;
 }
 
-const ProductsListingPage = ({ products }: ProductsListingPageProps) => {
+const ProductsListingPage = ({ products, pageTitle }: ProductsListingPageProps) => {
   return (
     <div>
       <Header />
-      <h2 className="text-lg font-semibold px-5 py-6">Produtos Recomendados</h2>
+      <h2 className="text-lg font-semibold px-5 py-6">{pageTitle}</h2>
       <div className="grid grid-cols-2 px-5 gap-6">
         {
           products.map(product => (
