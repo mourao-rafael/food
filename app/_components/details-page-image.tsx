@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { Button } from "./ui/button";
 import { ChevronLeftIcon } from "lucide-react";
 import { ReactElement } from "react";
+import { cn } from "../_lib/utils";
 
 interface DetailsPageImageProps {
   src: string;
@@ -28,7 +29,7 @@ const DetailsPageImage = ({ src, alt, imgClassName, childComponents }: DetailsPa
         width={0}
         height={0}
         sizes="100pw"
-        className={"w-full h-auto max-h-[22.5rem] object-cover " + imgClassName}
+        className={cn("w-full h-auto max-h-[22.5rem] object-cover", imgClassName)}
       />
 
       <Button

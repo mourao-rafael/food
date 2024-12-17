@@ -2,6 +2,7 @@ import { Card } from "@/app/_components/ui/card";
 import { formatPrice } from "@/app/_helpers/price";
 import { Restaurant } from "@prisma/client";
 import { BikeIcon, TimerIcon } from "lucide-react";
+import { cn } from "../_lib/utils";
 
 interface DeliveryCardProps {
   restaurant: Pick<Restaurant, 'deliveryFee' | 'deliveryTimeMinutes'>;
@@ -10,7 +11,7 @@ interface DeliveryCardProps {
 
 const DeliveryCard = ({ restaurant, className }: DeliveryCardProps) => {
   return (
-    <Card className={"flex justify-around py-3 " + className}>
+    <Card className={cn("flex justify-around py-3", className)}>
       {/* DELIVERY TIME */}
       <div className="flex flex-col items-center">
         <div className="flex items-center gap-1 text-muted-foreground">

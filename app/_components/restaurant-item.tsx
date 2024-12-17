@@ -4,6 +4,7 @@ import Image from "next/image";
 import { formatPrice } from "../_helpers/price";
 import Link from "next/link";
 import FavRestaurantButton from "./fav-restaurant-button";
+import { cn } from "../_lib/utils";
 
 interface RestaurantItemProps {
   restaurant: Restaurant;
@@ -12,7 +13,7 @@ interface RestaurantItemProps {
 
 const RestaurantItem = ({ restaurant, className }: RestaurantItemProps) => {
   return (
-    <Link href={`/restaurants/${restaurant.id}`} className={"min-w-[16.625rem] max-w-[16.625rem] space-y-2 " + className}>
+    <Link href={`/restaurants/${restaurant.id}`} className={cn("min-w-[16.625rem] max-w-[16.625rem] space-y-2", className)}>
       <div className="w-full h-[8.5rem] relative">
         {/* IMAGE: */}
         <Image src={restaurant.imageUrl} alt={restaurant.name} fill className="object-cover rounded-lg" />
